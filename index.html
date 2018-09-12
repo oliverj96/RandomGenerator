@@ -19,21 +19,23 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col s8">
+            <div class="col s12">
                 <br><br>
                 <input type="text" height="40" placeholder="Generated">
             </div>
-            <div class="col s2">
-                    <br><br>
+        </div>
+        <div class="row">
+            <div class="col s6 center">
                     <a class="waves-effect waves-light btn">Copy</a>
             </div>
-            <div class="col s2">
-                    <br><br>
+            <div class="col s6 center">
                     <a class="waves-effect waves-light btn">Clear</a>
             </div>
         </div>
         <div class="row">
             <div class="col s6">
+                <blockquote>Length:</blockquote>
+                <input type="number" placeholder="Max: 100">
                 <blockquote>Include: </blockquote>
                 <form action="#">
                     <p>
@@ -69,41 +71,46 @@
             <div class="col s6">
                 <blockquote>Spacing: </blockquote>
                 <form action="#">
-                        <p> 
-                            <div class="switch">
-                                <label>
-                                    Off
-                                    <input type="checkbox">
-                                    <span class="lever"></span>
-                                    On
-                                </label>
-                            </div>
-                        </p>
-                        <p>
-                            <label for="spacingNum">
-                                <input type="number" id="spacingNum" placeholder="Number per group">
-                            </label>
-                        </p>
-                        <p>
-                            <blockquote>Seperate by:</blockquote>
+                    <p> 
+                        <div class="switch">
                             <label>
-                                <input name="spaceBy" type="radio" checked>
-                                <span>' ' (empty space)</span>
+                                Off
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                On
                             </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input name="spaceBy" type="radio">
-                                <span>'_' (underscore)</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input name="spaceBy" type="radio">
-                                <span>'-' (dash)</span>
-                            </label>
-                        </p>
-                    </form>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="spacingNum">
+                            <input type="number" id="spacingNum" placeholder="Number per group">
+                        </label>
+                    </p>
+                    <p>
+                        <blockquote>Seperate by:</blockquote>
+                        <label>
+                            <input name="spaceBy" type="radio" checked>
+                            <span>' ' (empty space)</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="spaceBy" type="radio">
+                            <span>'_' (underscore)</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="spaceBy" type="radio">
+                            <span>'-' (dash)</span>
+                        </label>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center">
+                <a class="waves-effect waves-light btn-large">Generate</a>
             </div>
         </div>
     </div>
