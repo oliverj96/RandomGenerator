@@ -7,7 +7,12 @@ function startScript(){
 }
 
 function generate(){
-    var text = "adffa"; //placeholder
+    var text = ""; //placeholder
+    var length = getLength();
+    for (let index = 0; index < length; index++) {
+        
+        text += "a";
+    }
     document.getElementById("generatedText").value = text;
 }
 
@@ -27,4 +32,22 @@ function clear(){
 
 function getLength(){
     //return the length entered by the user
+    num  = document.getElementById("genSize").value;
+    return num;
+}
+
+function getCharacterSet(){
+    //return array of characters used
+}
+
+function isSeperate(){
+    //return the state of seperate
+}
+
+function serperateBy(){
+    //return the number per group
+}
+
+function serperateWith(){
+    //return the character(s) that seperates each group
 }
