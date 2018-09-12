@@ -1,6 +1,10 @@
-document.getElementById("copyButton").onclick = copy;
-document.getElementById("clearButton").onclick = clear;
-document.getElementById("generateButton").onclick = generate;
+$(document).ready(startScript);
+
+function startScript(){
+    document.getElementById("copyButton").onclick = copy;
+    document.getElementById("clearButton").onclick = clear;
+    document.getElementById("generateButton").onclick = generate;
+}
 
 function generate(){
     var text = "adffa"; //placeholder
