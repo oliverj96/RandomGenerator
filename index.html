@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Random Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 <body>
     <nav>
@@ -24,12 +26,41 @@
         </div>
         <div class="row">
             <div class="col s6">
-                <blockquote><h4>Include: </h4></blockquote>
+                <blockquote>Include: </blockquote>
+                <form action="#">
+                    <p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>Numbers</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>lowercase</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>UPPERCASE</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>Special set #1 (! @ # $ &)</span>
+                        </label>
+                    </p>
+                </form>
             </div>
             <div class="col s6">
-                <blockquote><h4>Spacing: </h4></blockquote>
+                <blockquote>Spacing: </blockquote>
             </div>
         </div>
     </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
