@@ -51,7 +51,8 @@ function getCharacterSet(){
     var set1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var set2 = "abcdefghijklmnopqrstuvwxyz";
     var set3 = "0123456789";
-    return set1;
+    var set4 = "!@#$%"
+    return set1+set2+set3+set4;
 }
 
 function isSeperate(){
