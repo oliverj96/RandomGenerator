@@ -95,7 +95,7 @@ function getCharacterSet(){
     if (document.getElementById("set1").checked){
         finalSet += "!@#$%"
     }
-
+    finalSet += document.getElementById("customSet").value;
     return finalSet;
 }
 
