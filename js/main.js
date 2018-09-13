@@ -24,8 +24,8 @@ function generate(){
 
 function copy(){
     //copy text to clipboard
-    var copyText = document.getElementById("generatedText").value;
-    //copyText.select();
+    document.getElementById("generatedText").focus();
+    document.getElementById("generatedText").select();
     document.execCommand("copy");
 }
 
