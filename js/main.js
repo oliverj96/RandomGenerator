@@ -48,11 +48,22 @@ function getLength(){
 
 function getCharacterSet(){
     //return array of characters used
-    var set1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var set2 = "abcdefghijklmnopqrstuvwxyz";
-    var set3 = "0123456789";
-    var set4 = "!@#$%"
-    return set1+set2+set3+set4;
+    var finalSet = ""
+    
+    if (document.getElementById("numbers").checked){
+        finalSet += "0123456789";
+    }
+    if (document.getElementById("lowercase").checked){
+        finalSet += "abcdefghijklmnopqrstuvwxyz";
+    }
+    if (document.getElementById("uppercase").checked){
+        finalSet += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+    if (document.getElementById("set1").checked){
+        finalSet += "!@#$%"
+    }
+
+    return finalSet;
 }
 
 function isSeperate(){
