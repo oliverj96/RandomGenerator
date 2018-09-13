@@ -23,12 +23,12 @@ function generate(){
         group = separateBy();
         groupSep = separateWith();
     }
-    console.log(separate);//remove later
+
     for (let index = 0; index < length; index++) {
         var rnum = Math.floor(Math.random() * charSet.length);
         text += charSet.substring(rnum,rnum+1);
         if (separate){
-            if ((index+1)%group==0){
+            if ((index+1)%group==0 && index != (length-1)){
                 text += groupSep;
             }
         }
@@ -106,7 +106,22 @@ function separateBy(){
 
 function separateWith(){
     //return the character(s) that seperates each group
-    return ' ';
+    if (document.getElementById("spaceSpace").checked){
+        //return space
+        return ' ';
+    }
+    if (document.getElementById("underscoreSpace").checked){
+        //return underscore
+        return '_';
+    }
+    if (document.getElementById("dashSpace").checked){
+        //return dash
+        return '-';
+    }
+    if (document.getElementById("customSpace").checked){
+        //return custom field
+        return document.getElementById("customSpaceSet").value;
+    }
 }
 
 function isSeparate(){
