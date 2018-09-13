@@ -84,33 +84,38 @@
                         </div>
                     </p>
                 </form>
-                <form id="spacingOptions" hidden>
+                <form id="spacingOptions">
                     <p>
                         <label for="spacingNum">
-                            <input type="number" id="spacingNum" placeholder="Number per group">
+                            <input disabled type="number" id="spacingNum" placeholder="Number per group">
                         </label>
                     </p>
                     <p>
                         <blockquote>Seperate by:</blockquote>
                         <label>
-                            <input name="spaceBy" type="radio" checked>
+                            <input name="spaceBy" type="radio" checked id="spaceSpace" disabled>
                             <span>' ' (empty space)</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input name="spaceBy" type="radio">
+                            <input name="spaceBy" type="radio" id="underscoreSpace" disabled>
                             <span>'_' (underscore)</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input name="spaceBy" type="radio">
+                            <input name="spaceBy" type="radio" id="dashSpace" disabled>
                             <span>'-' (dash)</span>
                         </label>
                     </p>
-                    <blockquote>Custom: </blockquote>
-                    <input type="text" placeholder="Any characters can go here">
+                    <p>
+                        <label>
+                            <input name="spaceBy" type="radio" id="customSpace" disabled>
+                            <span>Custom</span>
+                        </label>
+                    </p>
+                    <input type="text" placeholder="Any characters can go here" id="customSpaceSet" disabled>
                 </form>
             </div>
         </div>
