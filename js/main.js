@@ -15,9 +15,23 @@ function generate(){
     var text = ""; 
     var charSet = getCharacterSet();
     var length = getLength();
+
+    var group = 0;
+    var groupSep = "";
+    var separate = isSeparate();
+    if (separate){
+        group = separateBy();
+        groupSep = separateWith();
+    }
+    console.log(separate);//remove later
     for (let index = 0; index < length; index++) {
         var rnum = Math.floor(Math.random() * charSet.length);
-		text += charSet.substring(rnum,rnum+1);
+        text += charSet.substring(rnum,rnum+1);
+        if (separate){
+            if ((index+1)%group==0){
+                text += groupSep;
+            }
+        }
     }
     document.getElementById("generatedText").value = text;
 }
@@ -85,10 +99,17 @@ function getCharacterSet(){
     return finalSet;
 }
 
-function serperateBy(){
+function separateBy(){
     //return the number per group
+    return document.getElementById("spacingNum").value;
 }
 
-function serperateWith(){
+function separateWith(){
     //return the character(s) that seperates each group
+    return ' ';
+}
+
+function isSeparate(){
+    //return if separate is one
+    return !(document.getElementById("spacingNum").disabled);
 }
