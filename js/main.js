@@ -1,14 +1,14 @@
 $(document).ready(startScript);
 
 function startScript(){
-    document.getElementById("copyButton").onclick = copy;
-    document.getElementById("clearButton").onclick = clear;
-    document.getElementById("generateButton").onclick = generate;
-    document.getElementById("hideSpace").onclick = toggleSpacingOptions;
-    document.getElementById("customSpace").onclick = toggleCustomSpace;
-    document.getElementById("spaceSpace").onclick = toggleCustomSpace;
-    document.getElementById("underscoreSpace").onclick = toggleCustomSpace;
-    document.getElementById("dashSpace").onclick = toggleCustomSpace;
+    $("#copyButton").click(copy);
+    $("#clearButton").click(clear);
+    $("#generateButton").click(generate);
+    $("#hideSpace").click(toggleSpacingOptions);
+    $("#customSpace").click(toggleCustomSpace);
+    $("#spaceSpace").click(toggleCustomSpace);
+    $("#underscoreSpace").click(toggleCustomSpace);
+    $("#dashSpace").click(toggleCustomSpace);
 }
 
 function generate(){
@@ -33,19 +33,18 @@ function generate(){
             }
         }
     }
-    document.getElementById("generatedText").value = text;
+    $("#generatedText").val(text);
 }
 
 function copy(){
     //copy text to clipboard
-    document.getElementById("generatedText").focus();
-    document.getElementById("generatedText").select();
+    $("#generatedText").focus().select();
     document.execCommand("copy");
 }
 
 function clear(){
     //clear generated text field
-    document.getElementById("generatedText").value = "";
+    $("#generatedText").val("");
 }
 
 //Additional functions
