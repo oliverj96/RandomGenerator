@@ -4,7 +4,7 @@ function startScript(){
     document.getElementById("copyButton").onclick = copy;
     document.getElementById("clearButton").onclick = clear;
     document.getElementById("generateButton").onclick = generate;
-    document.getElementById("hideSpace").onclick = togleSpacingOptions;
+    document.getElementById("hideSpace").onclick = toggleSpacingOptions;
     document.getElementById("customSpace").onclick = toggleCustomSpace;
     document.getElementById("spaceSpace").onclick = toggleCustomSpace;
     document.getElementById("underscoreSpace").onclick = toggleCustomSpace;
@@ -12,23 +12,23 @@ function startScript(){
 }
 
 function generate(){
-    var text = ""; 
-    var charSet = getCharacterSet();
-    var length = getLength();
+    let text = "";
+    const charSet = getCharacterSet();
+    const length = getLength();
 
-    var group = 0;
-    var groupSep = "";
-    var separate = isSeparate();
+    let group = 0;
+    let groupSep = "";
+    let separate = isSeparate();
     if (separate){
         group = separateBy();
         groupSep = separateWith();
     }
 
     for (let index = 0; index < length; index++) {
-        var rnum = Math.floor(Math.random() * charSet.length);
-        text += charSet.substring(rnum,rnum+1);
+        let r_num = Math.floor(Math.random() * charSet.length);
+        text += charSet.substring(r_num,r_num+1);
         if (separate){
-            if ((index+1)%group==0 && index != (length-1)){
+            if ((index+1)%group===0 && index !== (length-1)){
                 text += groupSep;
             }
         }
@@ -50,11 +50,9 @@ function clear(){
 
 //Additional functions
 
-function togleSpacingOptions(){
+function toggleSpacingOptions(){
     //toggle the options under spacing
-    //isHidden = isSeperate();
-    //document.getElementById("spacingOptions").hidden = !isHidden;
-    isDisabled = document.getElementById("spacingNum").disabled;
+    let isDisabled = document.getElementById("spacingNum").disabled;
     document.getElementById("spacingNum").disabled = !isDisabled;
     document.getElementById("spaceSpace").disabled = !isDisabled;
     document.getElementById("underscoreSpace").disabled = !isDisabled;
@@ -63,26 +61,20 @@ function togleSpacingOptions(){
 }
 
 function toggleCustomSpace(){
-    if (document.getElementById("customSpace").checked){
-        document.getElementById("customSpaceSet").disabled = false;
-    }
-    else{
-        document.getElementById("customSpaceSet").disabled = true;
-    }
+    document.getElementById("customSpaceSet").disabled = !document.getElementById("customSpace").checked;
 }
 
 //Functions below are to help the generate function
 
 function getLength(){
     //return the length entered by the user
-    num  = document.getElementById("genSize").value;
-    return num;
+    return document.getElementById("genSize").value;
 }
 
 function getCharacterSet(){
     //return array of characters used
-    var finalSet = ""
-    
+    let finalSet = "";
+
     if (document.getElementById("numbers").checked){
         finalSet += "0123456789";
     }
@@ -105,7 +97,7 @@ function separateBy(){
 }
 
 function separateWith(){
-    //return the character(s) that seperates each group
+    //return the character(s) that separates each group
     if (document.getElementById("spaceSpace").checked){
         //return space
         return ' ';
